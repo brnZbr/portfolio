@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
 import { cn } from "../lib/utils"
-import { Menu, X } from "lucide-react";
-import { ThemeToggle } from "./ThemeToggle";
+import { Menu, Moon, Sun, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { handleScroll } from "../hooks/scroll";
 
@@ -10,6 +9,7 @@ export const NavBar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const { t, i18n } = useTranslation();
     const MAX_WIDTH_PX = "1024px";
+    const [isDarkMode, setIsDarkMode] = useState(true);
 
     const navItems = [
         { name: t('contact.navBarHome'), href: "#hero" },
@@ -21,13 +21,13 @@ export const NavBar = () => {
     ];
 
     useEffect(() => {
-        const handleScroll = () => {
-            setIsScrolled(window.screenY > 10)
-        }
+        const onScroll = () => {
+            setIsScrolled(window.scrollY > 10);
+        };
 
-        window.addEventListener("scroll", handleScroll)
-        return () => window.removeEventListener("scroll", handleScroll)
-    }, [])
+        window.addEventListener("scroll", onScroll);
+        return () => window.removeEventListener("scroll", onScroll);
+    }, []);
 
 
     const toggleLanguage = () => {
@@ -53,6 +53,30 @@ export const NavBar = () => {
         i18n.changeLanguage(storedLanguage);
     }, []);
 
+
+    useEffect(() => {
+        const storedTheme = localStorage.getItem("theme");
+        if (storedTheme === "dark") {
+            setIsDarkMode(true);
+            document.documentElement.classList.add("dark");
+        } else {
+            setIsDarkMode(false);
+            document.documentElement.classList.remove("dark");
+        }
+    }, []);
+
+    const toggleTheme = () => {
+        if (isDarkMode) {
+            document.documentElement.classList.remove("dark");
+            localStorage.setItem("theme", "light");
+            setIsDarkMode(false);
+        } else {
+            document.documentElement.classList.add("dark");
+            localStorage.setItem("theme", "dark");
+            setIsDarkMode(true);
+        }
+    }
+
     return (
         <nav className={cn(
             "fixed w-full z-40 transition-all duration-300",
@@ -60,9 +84,9 @@ export const NavBar = () => {
         )}>
             <div className="container flex items-center justify-between">
                 <a className="text-xl font-bold text-primary flex items-center" href="#hero">
-                    <span className="relative z-10">
+                    <span className="relative z-10 text-lg">
                         {""}
-                        <span className="text-glow text-foreground">Bruno dos Santos</span> Portfólio
+                        <span className="text-glow text-foreground text-sm">Bruno dos Santos</span> Portfólio
                     </span>
                 </a>
 
@@ -80,26 +104,46 @@ export const NavBar = () => {
                     ))}
                     <button
                         onClick={toggleLanguage}
-                        className="text-foreground/80 font-bold duration-300 hover:cursor-pointer bg-transparent border-none p-0"
+                        className="text-foreground/80 font-bold duration-300 hover:cursor-pointer bg-transparent border-none p-0 "
                     >
                         {i18n.language === 'en' ? '🇺🇸 EN' : '🇧🇷 PT-BR '}
+                    </button>
+                    <button
+                        onClick={toggleTheme}
+                        className="text-foreground/80 font-bold duration-300 hover:cursor-pointer bg-transparent border-none p-"
+                    >
+                        {isDarkMode ? (
+                            <Sun className="h-5 w-5 text-yellow-300" />
+                        ) : (
+                            <Moon className="h-5 w-5 text-blue-900" />
+                        )}
                     </button>
                 </div>
 
                 {/* MOBILE */}
-                <div className="lg:hidden flex">
+                <div className="lg:hidden flex gap-4">
                     <button
                         onClick={() => setIsMenuOpen((prev) => !prev)}
-                        className="p-2 text-foreground z-50"
+                        className="text-foreground z-50"
                         aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
                     >
                         {isMenuOpen ? <X size={24} /> : <Menu size={20} />}
                     </button>
                     <button
                         onClick={toggleLanguage}
-                        className="text-foreground/80 font-bold duration-300 hover:cursor-pointer bg-transparent border-none p-0"
+                        className="text-foreground/80 font-bold duration-300 hover:cursor-pointer bg-transparent border-none p-"
                     >
-                        {i18n.language === 'en' ? '🇺🇸 EN' : '🇧🇷 PT-BR'}
+                        {i18n.language === 'en' ? '🇺🇸' : '🇧🇷'}
+                    </button>
+                    <button
+                        onClick={toggleTheme}
+                        className="text-foreground/80 font-bold duration-300 hover:cursor-pointer bg-transparent border-none p-"
+                    >
+                        {isDarkMode ? (
+                            <Sun className="h-5 w-5 text-yellow-300" />
+                        ) : (
+                            <Moon className="h-5 w-5 text-blue-900" />
+                        )}
                     </button>
                 </div>
                 <div className={cn(
