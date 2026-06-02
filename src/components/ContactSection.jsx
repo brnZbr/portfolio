@@ -1,5 +1,6 @@
 import { Mail, MapPin, Phone } from "lucide-react"
 import { useTranslation } from "react-i18next";
+import linkedinPicture from '../assets/linkedin.png'
 
 export const ContactSection = () => {
     const { t } = useTranslation();
@@ -16,11 +17,6 @@ export const ContactSection = () => {
                     {t('contact.contactSubTitle')}
                 </p>
                 <h3 className="text-2xl font-semibold mb-2 text-center">{t('contact.contactInfo')}</h3>
-
-                {/* Container dos Contatos: 
-                    flex-col no celular (empilhados)
-                    md:flex-row no desktop (lado a lado)
-                */}
                 
                 <div className="py-10 flex flex-col md:flex-row justify-center items-start md:items-center gap-10">
 
@@ -77,9 +73,9 @@ export const ContactSection = () => {
                             href="https://www.linkedin.com/in/bruno-dos-santos-gomes-2794a62ba/"
                             target="_blank"
                             rel="noreferrer"
-                            className="hover:scale-110 transition-transform duration-200" // Um efeitinho extra de hover!
+                            className="hover:scale-110 transition-transform duration-200"
                         >
-                            <img src="../../linkedin.png" alt="Linkedin" className="h-8 w-8" />
+                            <img src={linkedinPicture} alt="Linkedin" className="h-8 w-8" />
                         </a>
                     </div>
                 </div>

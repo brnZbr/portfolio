@@ -1,6 +1,7 @@
 import { Download, Eye, View } from "lucide-react";
 import { useTranslation } from "react-i18next"
-
+import certificate01Img from '../assets/certificates/ITformation/picture.png'
+import certificate01Pdf from '../assets/certificates/ITformation/certificate.pdf'
 
 export const Certificates = () => {
     const { t } = useTranslation();
@@ -10,8 +11,8 @@ export const Certificates = () => {
             id: 1,
             title: t("certificates.ITFormationTitle"),
             description: t("certificates.ITFormationDescription"),
-            image: "../../certificates/ITformation/picture.png",
-            pdf: "../../certificates/ITformation/certificate.pdf",
+            image: certificate01Img,
+            pdf: certificate01Pdf,
             demoUrl: "#",
         },
     ];

@@ -1,12 +1,14 @@
 import { ArrowRight, ExternalLink } from "lucide-react"
 import { useTranslation } from "react-i18next";
+import project01 from '../assets/projects/01/preview01.png'
+import gitHubSign from '../assets/github-sign.png'
 
 const projects = [
     {
         id: 1,
         title: "Hypercar 3D Gallery",
         description: "Galeria interativa de carros esportivos construída com HTML, CSS e JavaScript puro (Vanilla). O projeto destaca a manipulação do DOM para a troca dinâmica de slides, animações CSS avançadas com transformações espaciais (3D) e layout responsivo para celular",
-        image: "../../projects/01/preview01.png",
+        image: project01,
         tags: ["HTML", "CSS", "JS"],
         demoUrl: "https://brnzbr.github.io/projectCssHTMLjs01/",
         githubUrl: "https://github.com/brnZbr/projectCssHTMLjs01",
@@ -49,7 +51,7 @@ export const ProjectsSection = () => {
                                             <ExternalLink size={20} />
                                         </a>
                                         <a href={project.githubUrl} target="_blank" className="text-foreground/80 hover:text-primary transition-colors duration-300">
-                                            <img src="../../github-sign.png" className="h-5 w-5" />
+                                            <img src={gitHubSign} className="h-5 w-5" />
                                         </a>
                                     </div>
                                 </div>
