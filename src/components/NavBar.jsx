@@ -3,6 +3,7 @@ import { cn } from "../lib/utils"
 import { Menu, X } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
 import { useTranslation } from "react-i18next";
+import { handleScroll } from "../hooks/scroll";
 
 export const NavBar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -30,7 +31,6 @@ export const NavBar = () => {
 
 
     const toggleLanguage = () => {
-        // Se a língua atual for inglês, muda pra português, senão, muda pra inglês
         const newLang = i18n.language === 'en' ? 'pt' : 'en';
         if (newLang === 'en') {
             document.documentElement.classList.add("en");
@@ -72,6 +72,7 @@ export const NavBar = () => {
                         <a
                             key={key}
                             href={item.href}
+                            onClick={(e) => handleScroll(e, item.href)}
                             className="text-foreground/80 hover:text-primary transition-colors font-bold duration-300"
                         >
                             {item.name}
@@ -111,6 +112,7 @@ export const NavBar = () => {
                             <a
                                 key={key}
                                 href={item.href}
+                                onClick={(e) => handleScroll(e, item.href)}
                                 className="text-foreground/80 hover:text-primary transition-300 font-bold"
                                 onClick={() => setIsMenuOpen(false)}
                             >

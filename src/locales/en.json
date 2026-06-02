@@ -45,5 +45,9 @@
     "certificates": {
         "ITFormationTitle": "Technical Degree in IT",
         "ITFormationDescription": "Solid foundation in tech support, hardware, network infrastructure, and development fundamentals."
+    },
+    "projects": {
+        "firstProjectTitle": "Hypercar 3D Gallery",
+        "firstProjectDescription": "Interactive sports car gallery built with pure (Vanilla) HTML, CSS, and JavaScript. The project highlights DOM manipulation for dynamic slide switching, advanced CSS animations with spatial (3D) transformations, and a responsive mobile layout."
     }
 }

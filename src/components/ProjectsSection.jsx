@@ -3,21 +3,21 @@ import { useTranslation } from "react-i18next";
 import project01 from '../assets/projects/01/preview01.png'
 import gitHubSign from '../assets/github-sign.png'
 
-const projects = [
-    {
-        id: 1,
-        title: "Hypercar 3D Gallery",
-        description: "Galeria interativa de carros esportivos construída com HTML, CSS e JavaScript puro (Vanilla). O projeto destaca a manipulação do DOM para a troca dinâmica de slides, animações CSS avançadas com transformações espaciais (3D) e layout responsivo para celular",
-        image: project01,
-        tags: ["HTML", "CSS", "JS"],
-        demoUrl: "https://brnzbr.github.io/projectCssHTMLjs01/",
-        githubUrl: "https://github.com/brnZbr/projectCssHTMLjs01",
-    },
-];
-
 export const ProjectsSection = () => {
     const { t } = useTranslation();
-  
+
+    const projects = [
+        {
+            id: 1,
+            title: t("projects.firstProjectTitle"),
+            description: t("projects.firstProjectDescription"),
+            image: project01,
+            tags: ["HTML", "CSS", "JS"],
+            demoUrl: "https://brnzbr.github.io/projectCssHTMLjs01/",
+            githubUrl: "https://github.com/brnZbr/projectCssHTMLjs01",
+        },
+    ];
+
     return (
         <section id="projects" className="py-24 px-2 relative">
             <div className="container mx-auto max-w-8xl">
@@ -26,7 +26,7 @@ export const ProjectsSection = () => {
                 </h2>
 
                 <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-                   {t('contact.projectsSubTitle')}
+                    {t('contact.projectsSubTitle')}
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

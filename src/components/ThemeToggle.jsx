@@ -12,7 +12,6 @@ export const ThemeToggle = () => {
             document.documentElement.classList.add("dark");
         } else {
             setIsDarkMode(false);
-            // O padrão do Tailwind é: se não tem a classe 'dark', ele já é light automático!
             document.documentElement.classList.remove("dark"); 
         }
     }, []);

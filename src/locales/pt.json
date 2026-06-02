@@ -45,5 +45,9 @@
     "certificates": {
         "ITFormationTitle": "Formação Técnica em T.I.",
         "ITFormationDescription": "Base sólida em suporte, hardware, infraestrutura de redes e fundamentos de desenvolvimento."
+    },
+    "projects": {
+        "firstProjectTitle": "Galeria 3D de Hipercarros",
+        "firstProjectDescription": "Galeria interativa de carros esportivos construída com HTML, CSS e JavaScript puro (Vanilla). O projeto destaca a manipulação do DOM para a troca dinâmica de slides, animações CSS avançadas com transformações espaciais (3D) e layout responsivo para celular"
     }
 }
