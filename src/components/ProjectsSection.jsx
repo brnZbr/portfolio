@@ -1,6 +1,7 @@
 import { ArrowRight, ExternalLink } from "lucide-react"
 import { useTranslation } from "react-i18next";
 import project01 from '../assets/projects/01/preview01.png'
+import project02 from '../assets/projects/02/preview02.png'
 import gitHubSign from '../assets/github-sign.png'
 
 export const ProjectsSection = () => {
@@ -15,6 +16,15 @@ export const ProjectsSection = () => {
             tags: ["HTML", "CSS", "JS"],
             demoUrl: "https://brnzbr.github.io/projectCssHTMLjs01/",
             githubUrl: "https://github.com/brnZbr/projectCssHTMLjs01",
+        },
+        {
+            id: 2,
+            title: t("projects.secondProjectTitle"),
+            description: t("projects.secondProjectDescription"),
+            image: project02,
+            tags: ["HTML", "CSS"],
+            demoUrl: "https://brnzbr.github.io/projeto-web-sobre-o-outono/index.html",
+            githubUrl: "https://github.com/brnZbr/projeto-web-sobre-o-outono",
         },
     ];
 

@@ -48,6 +48,8 @@
     },
     "projects": {
         "firstProjectTitle": "Hypercar 3D Gallery",
-        "firstProjectDescription": "Interactive sports car gallery built with pure (Vanilla) HTML, CSS, and JavaScript. The project highlights DOM manipulation for dynamic slide switching, advanced CSS animations with spatial (3D) transformations, and a responsive mobile layout."
+        "firstProjectDescription": "Interactive sports car gallery built with pure (Vanilla) HTML, CSS, and JavaScript. The project highlights DOM manipulation for dynamic slide switching, advanced CSS animations with spatial (3D) transformations, and a responsive mobile layout.",
+        "secondProjectTitle": "Cozy Autumn Landing Page",
+        "secondProjectDescription": "A seasonal web layout developed with semantic HTML and modern CSS. The project demonstrates advanced structuring techniques using CSS Grid and Flexbox, emphasizing mobile-first responsiveness, fluid image framing with object-fit and aspect-ratio, and custom UI styling to create a cohesive user experience."
     }
 }
