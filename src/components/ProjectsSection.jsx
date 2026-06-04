@@ -2,6 +2,7 @@ import { ArrowRight, ExternalLink } from "lucide-react"
 import { useTranslation } from "react-i18next";
 import project01 from '../assets/projects/01/preview01.png'
 import project02 from '../assets/projects/02/preview02.png'
+import project03 from '../assets/projects/03/preview03.png'
 import gitHubSign from '../assets/github-sign.png'
 
 export const ProjectsSection = () => {
@@ -25,6 +26,15 @@ export const ProjectsSection = () => {
             tags: ["HTML", "CSS"],
             demoUrl: "https://brnzbr.github.io/projeto-web-sobre-o-outono/index.html",
             githubUrl: "https://github.com/brnZbr/projeto-web-sobre-o-outono",
+        },
+        {
+            id: 2,
+            title: t("projects.thirdProjectTitle"),
+            description: t("projects.thirdProjectDescription"),
+            image: project03,
+            tags: ["HTML", "CSS"],
+            demoUrl: "https://brnzbr.github.io/Coffee-Menu/index.html",
+            githubUrl: "https://github.com/brnZbr/Coffee-Menu/tree/main",
         },
     ];
 

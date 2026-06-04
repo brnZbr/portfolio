@@ -50,6 +50,8 @@
         "firstProjectTitle": "Galeria 3D de Hipercarros",
         "firstProjectDescription": "Galeria interativa de carros esportivos construída com HTML, CSS e JavaScript puro (Vanilla). O projeto destaca a manipulação do DOM para a troca dinâmica de slides, animações CSS avançadas com transformações espaciais (3D) e layout responsivo para celular",
         "secondProjectTitle": "Landing Page de Outono Aconchegante",
-        "secondProjectDescription": "Um layout web sazonal desenvolvido com HTML semântico e CSS moderno. O projeto demonstra técnicas avançadas de estruturação usando CSS Grid e Flexbox, com ênfase em responsividade mobile-first, enquadramento fluido de imagens com object-fit e aspect-ratio, e estilização personalizada de interface para criar uma experiência de usuário única."
+        "secondProjectDescription": "Um layout web sazonal desenvolvido com HTML semântico e CSS moderno. O projeto demonstra técnicas avançadas de estruturação usando CSS Grid e Flexbox, com ênfase em responsividade mobile-first, enquadramento fluido de imagens com object-fit e aspect-ratio, e estilização personalizada de interface para criar uma experiência de usuário única.",
+        "thirdProjectTitle": "Landing Page Premium para Cafeterias (Design Modular)",
+        "thirdProjectDescription": "Uma página web sofisticada e totalmente responsiva, projetada para apresentar a história e o cardápio interativo de uma cafeteria. Desenvolvida com HTML semântico e CSS moderno, sua arquitetura altamente modular garante que o layout, as seções e o estilo possam ser facilmente adaptados para qualquer tipo de negócio local, restaurante ou prestação de serviço."
     }
 }
